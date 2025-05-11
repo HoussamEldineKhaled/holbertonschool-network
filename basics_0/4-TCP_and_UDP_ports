@@ -1,2 +1,2 @@
 #!usr/bin/env bash
-ss -tulnp | grep LISTEN
+sudo ss -tulnp | grep LISTEN
