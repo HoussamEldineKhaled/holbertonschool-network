@@ -1,9 +1,3 @@
 #!/usr/bin/env bash
 
-echo "Active Internet connections (only servers)"
-
-sudo netstat -tlnp | grep -E 'Proto|LISTEN|udp'
-
-echo -e "\nActive UNIX domain sockets (only servers)"
-
-sudo netstat -lxp --unix
+netstat -tulpen
