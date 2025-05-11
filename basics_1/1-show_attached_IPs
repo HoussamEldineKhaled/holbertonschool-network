@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
 # this script displays all active IPv4
 
-ip-4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+if command -v ip &>/dev/null; then
+    ip-4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+elif command -v ifconfig &>/dev/null; then
+    ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+else
+    echo "Error: Neither 'ip' nor 'ifconfig' commands found" >&2
+    exit 1
+fi
