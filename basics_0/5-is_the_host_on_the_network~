@@ -1,0 +1,3 @@
+#!/ysr/bin/env bash
+#check if user on the network
+ping -c 5 "$1"
