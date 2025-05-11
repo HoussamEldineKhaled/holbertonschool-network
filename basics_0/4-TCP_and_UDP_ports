@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # listening TCP and UDP ports
-sudo netstat -tulpn
+ss -tulnp
 
-sudo netstat -lxn
+# active unix domain
+ss -lxn
