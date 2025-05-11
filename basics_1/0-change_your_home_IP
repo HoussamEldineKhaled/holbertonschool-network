@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#modification of DNS resolution
 sudo cp /etc/hosts /etc/hosts.bak
 
 
