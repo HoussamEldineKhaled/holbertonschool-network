@@ -1,2 +1,2 @@
 #!usr/bin/env bash
-netstat -tulnap
+netstat -tulnap | grep LISTEN
