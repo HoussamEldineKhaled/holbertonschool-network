@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # this script displays all active IPv4
 
-ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '^127\.'
+ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
